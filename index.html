@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Placeholder Data Loader</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Сервіс для завантатаження даних з ресурсу {JSON} Placeholder</h1>
+    <div class="input-container">
+        <input type="text" id="url-input" placeholder="ENTER URL">
+        <div class="button-container">
+            <button id="load-data-btn">ЗАВАНТАЖИТИ ДАНІ</button>
+            <button id="clear-btn" disabled>ОЧИСТИТИ</button>
+        </div>
+    </div>
+    <div id="status"></div>
+    <div id="confirmation" style="display: none;">
+        <p>Дані формату JSON успішно завантажено. Кількість записів рівна <span id="record-count"></span>.</p>
+        <p>Відобразити Ваш варіант таблиці?</p>
+        <div class="button-group">
+            <div class="yes-no-buttons">
+                <button id="show-table-yes">ТАК</button>
+                <button id="show-table-no">НІ</button>
+            </div>
+            <button id="clear-sorting-btn" style="display: none;">ОЧИСТИТИ СОРТУВАННЯ</button>
+        </div>
+    </div>
+    <table id="data-table" style="display: none;">
+        <thead>
+            <tr>
+                <th data-column="id">ID</th>
+                <th data-column="name">NAME</th>
+                <th data-column="username">USERNAME</th>
+                <th data-column="email">EMAIL</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./js/task.js"></script>
+</body>
+</html>
